@@ -26,13 +26,13 @@
                 <a class="logo" href="./index.html">Web<span class="navy">Studio</span></a>
                 <ul class="nav flex">
                     <li class="nav-item">
-                        <a class="link active-link" href="./index.html">Studio</a>
+                        <a class="link active-link" href="./index.html#studio">Studio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="link" href="#portfolio">Portfolio</a>
+                        <a class="link" href="./index.html#portfolio">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="link" href="">Contacts</a>
+                        <a class="link" href="./index.html#contacts">Contacts</a>
                     </li>
                 </ul>
             </nav>
@@ -48,16 +48,23 @@
                     </li>
                 </ul>
             </address>
+
+                <svg menu-btn-open class="header-burger-btn" width="24" height="24">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+            
+
         </div>
     </header>
 
     <main>
         <!-- BANNER 1-->
 
-        <section class="banner">
+        <section id="studio" class="banner">
             <div class="container ">
                 <h1 class="banner-title">Effective Solutions for Your Business</h1>
-                <button modal-btn-open class="banner-button" type="button" content="Order Service">Order Service</button>
+                <button modal-btn-open class="banner-button" type="button" content="Order Service">Order
+                    Service</button>
             </div>
 
         </section>
@@ -131,7 +138,7 @@
         </section>
 
         <!-- OUR TEAM 3-->
-        <section class="our-team">
+        <section id="contacts" class="our-team">
             <div class="container">
                 <h2 class="our-team-title">Our Team</h2>
                 <ul class="our-team-list" id="studio">
@@ -383,7 +390,8 @@
     </main>
 
     <footer class="footer">
-        <div class="container flex-baseline">
+        <div class="container footer-container-flex">
+
 
             <div class="footer-slogan">
                 <a class="footer-logo footer-logo-display-block" href="./index.html">Web<span
@@ -431,7 +439,7 @@
                 </ul>
             </div>
 
-            <div class="footer-subscribe-form-container">
+            <div class="footer-subscribe-form-wrapper">
                 <p class="footer-subcribe-form-title">Subscribe</p>
 
                 <form class="footer-subscribe-form">
@@ -451,7 +459,72 @@
         </div>
     </footer>
 
-    <div modal-overlay class="modal-overlay">
+    <div menu-overlay class="menu-overlay">
+        <div class="menu">
+            <button menu-btn-close type="button" class="menu-btn-close">
+                <svg class="modal-btn-close-icon" width="8" height="8">
+                    <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+            </button>
+    
+            <ul class="menu-nav">
+                <li menu-btn-studio class="menu-nav-item">
+                    <a class="menu-link active-menu-link" href="./index.html#studio">Studio</a>
+                </li>
+                <li menu-btn-portfolio class="menu-nav-item">
+                    <a class="menu-link" href="./index.html#portfolio">Portfolio</a>
+                </li>
+                <li menu-btn-contacts class="menu-nav-item">
+                    <a class="menu-link" href="./index.html#contacts">Contacts</a>
+                </li>
+            </ul>
+    
+            <address class="menu-address-block">
+                <ul class="menu-address-list">
+                    <li>
+                        <a class="menu-address-link menu-address-link-active" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                    </li>
+                    <li>
+                        <a class="menu-address-link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+                    </li>
+                </ul>
+                
+                <ul class="menu-socials-list">
+                    <li class="menu-socials-list-item">
+                        <a href="" class="menu-socials-link">
+                            <svg class="menu-socials-icon" width="16" height="16">
+                                <use href="./images/icons.svg#icon-instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="menu-socials-list-item">
+                        <a href="" class="menu-socials-link">
+                            <svg class="menu-socials-icon" width="16" height="16">
+                                <use href="./images/icons.svg#icon-twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="menu-socials-list-item">
+                        <a href="" class="menu-socials-link">
+                            <svg class="menu-socials-icon" width="16" height="16">
+                                <use href="./images/icons.svg#icon-facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="menu-socials-list-item">
+                        <a href="" class="menu-socials-link">
+                            <svg class="menu-socials-icon" width="16" height="16">
+                                <use href="./images/icons.svg#icon-linkedin"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </address>
+
+        </div>
+    </div>
+
+    <div modal-overlay class="modal-overlay ">
         <div class="modal">
             <button modal-btn-close type="button" class="modal-btn-close">
                 <svg class="modal-btn-close-icon" width="8" height="8">
@@ -510,6 +583,7 @@
         </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 
 </html>
